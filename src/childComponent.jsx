@@ -9,7 +9,9 @@ class ChildComponent extends React.Component {
       <h2>{this.props.name}</h2>
       <img src={this.props.status === "Hungry" ? this.props.imageSad : this.props.imageHappy} alt={this.props.name} style={{ width: '200px', height: '200px' }} />
       <p> Status: {this.props.status}</p>
-      <button onClick={() => this.props.onAction(this.props.id)}>Give Food</button>
+      <button onClick={() => this.props.onAction(this.props.id)}>
+        {this.props.status === "Hungry" ? "Give Food" : "Make Angry"}
+      </button>
 
       
      
